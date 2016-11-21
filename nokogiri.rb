@@ -30,7 +30,7 @@ require 'csv'
 
 
 #filename = "RSPWMN_OVMRGD_09-16-16.TXT" 
-filename = "test_file.TXT" #This is a small subset, because this script takes a long time.
+filename = "test_file.txt" #This is a small subset, because this script takes a long time.
 
 #Take text file list of scholarships, return hash of scholarships (by id)
 #with subhash of scholarship info.
@@ -124,12 +124,12 @@ file_info = get_web_info(file)
 
 #Print the information to a text file in .csv format.
 new_file = File.open("Output.txt", 'w') do |file|
-	file.write("Record_ID,Scholarship Name," +
-		"URL,Page_Response," +
-		"Scholarship_Text_Search,Error_Text \n")
+	file.write("Record_ID\tScholarship Name\t" +
+		"URL\tPage_Response\t" +
+		"Scholarship_Text_Search\tError_Text \n")
 	file_info.each do |record_id, record|
-		file.write("#{record_id},#{record[:scholarship_name]}," +
-			"#{record[:url]},#{record[:response]}," +
-			"#{record[:search_result]},#{record[:error]} \n")
+		file.write("#{record_id}\t#{record[:scholarship_name]}\t" +
+			"#{record[:url]}\t#{record[:response]}\t" +
+			"#{record[:search_result]}\t#{record[:error]} \n")
 	end
 end
