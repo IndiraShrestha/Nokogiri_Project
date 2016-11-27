@@ -1,4 +1,4 @@
-* # Update your database *
+# Database Update Helper
 ---
 
 ### Synopsis
