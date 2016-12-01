@@ -2,34 +2,8 @@
 require'rubygems'
 require 'nokogiri'
 require 'open-uri'
-#require 'pry'
 require 'csv'
 
-#url = "http://www.medstartr.com/project/detail/833-360me"
-
-
-# file = load_file("RSPWMN_OVMRGD_09-16-16.TXT")
-
-# file.each do |record|
-# 	page = open(record[:url]).read
-
-# 	doc = Nokogiri::HTML(page)
-
-# 	begin 
-# 	  file = open(url)
-# 	  doc = Nokogiri::HTML(file) do
-# 	    #do somet
-# 	  end
-# 	rescue Exception => e
-# 	  puts e # Error message
-# 	  puts e.io.status # Http Error code
-# 	  puts e.io.readlines # Http response body
-# 	end 
-
-# end
-
-
-#filename = "RSPWMN_OVMRGD_09-16-16.TXT" 
 filename = "test_file.txt" #This is a small subset, because this script takes a long time.
 
 #Take text file list of scholarships, return hash of scholarships (by id)
@@ -135,6 +109,7 @@ def get_record_info(record)
 	return record
 
 end
+
 
 
 

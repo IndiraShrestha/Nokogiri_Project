@@ -3,7 +3,7 @@
 
 ### Synopsis
 ---
-This project was created as part of partner project while at ####[Startup Insitute](https://www.startupinstitute.com/). 
+This project was created as part of partner project while at [Startup Insitute](https://www.startupinstitute.com/). 
 
 ### Detail
 ---
