@@ -1,6 +1,8 @@
 require './webscrapping.rb'
 
 #process text file into a hash of scholarship info
+filename = "test_file.txt" #This is a small subset, because this script takes a long time.
+
 file = load_file(filename)
 
 #we used the get_web_info(file)
@@ -18,5 +20,5 @@ new_file = File.open("Output.txt", 'w') do |file|
       "#{record[:title]}\t" +
       "#{record[:search_result_for_scholarship]}\t#{record[:error]} \n")
   end
-end
+end 
 
